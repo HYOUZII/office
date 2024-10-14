@@ -1,8 +1,9 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /*class Main {
+
     public static void main(String[] args){
-        final int current = 2012;
+        final int current = 2013;
         int BirthYear, age;
         Scanner input = new Scanner(System.in);
 
@@ -10,7 +11,12 @@ import java.util.Scanner;
         input.close();
 
         BirthYear = current - age;
-        System.out.println(BirthYear);
+        System.out.print((BirthYear)%100 + " ");
+
+        if (BirthYear>=2000) {
+            System.out.println(3);
+        } else {
+            System.out.println(1);
+        }
     }
-}
 */

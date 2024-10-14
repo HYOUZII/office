@@ -1,6 +1,6 @@
 import java.util.*;
 
-// This code is counting ages.
+/*
 class Main {
     public static void main(String[] args) {
         int age;
@@ -21,3 +21,4 @@ class Main {
         System.out.println(age);
     }
 }
+*/

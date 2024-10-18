@@ -1,23 +1,39 @@
 import java.util.*;
-//[Class 41] 메소드의 매개변수에 대해서 배우자.
 class Main{
+    //[Class 43] 메소드의 활용.
+    // public static int ajja(){
 
-    public static void getsum(int x, int y) {
-        System.out.println(x + y);
+    //     return 0;
+    // }
+
+    //[1222] 축구의 신 2
+    public static int GOD(int time, int A){
+        int result = A;
+        for(int i=0 ; i<90-time ; i+=5){
+            
+            System.out.println("goal!!");
+            result++;
+            
+        }
+        return result;
     }
 
-
-
     public static void main(String[] args){
-        // 함수는 class 안에 들어가야 한다.
-        int a,b;
+        
+        int add1,current, Class1=5, Class2=7;
         Scanner input = new Scanner(System.in);
 
-        a = input.nextInt();
-        b = input.nextInt();
+        current = input.nextInt();
+        add1 = input.nextInt();
+        Class2 = input.nextInt();
         input.close();
 
-        getsum(a,b);
-        
+        Class1 = GOD(current, add1);
+        System.out.println(Class1+" : "+Class2);
+
+        if (Class1 >= Class2) {
+            if (Class1 == Class2){System.out.println("same");}
+            else{System.out.println("win");}
+        } else {System.out.println("lose");}
     }
 }

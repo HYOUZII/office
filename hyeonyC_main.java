@@ -1,20 +1,21 @@
-//for문 새로운 작성법 배움
+// 단순반복문 연습
+import java.util.*;
 
-class Main {
-    public static int evensumorOdd(int[] nums) {
-        int sum = 0;
-        for (int i : nums) {
-            if (i % 2 == 0) {
-                sum += i;
-            } else {
-                sum -= i;
-            }
-        }
-        return sum;
+class Main{
+    public static void watingzero(){
+        int num = 1;
+        Scanner input = new Scanner(System.in);
+        
+        do {
+            num = input.nextInt();
+            if(num==0){break;}
+            else{System.out.println(num);}     
+        } while (num != 0);
+        
+        
+        input.close();
     }
-
-    public static void main(String[] args) {
-        int[] arry = { 1, 2, 3, 87, 3, 4, 6, 88, 8, 3, 4 };
-        System.out.println(evensumorOdd(arry));
+    public static void main(String[] args){
+        watingzero();
     }
 }

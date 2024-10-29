@@ -2,20 +2,16 @@
 import java.util.*;
 
 class Main{
-    public static void watingzero(){
-        int num = 1;
+    public static void waitingQ(){
+        char in;
         Scanner input = new Scanner(System.in);
-        
         do {
-            num = input.nextInt();
-            if(num==0){break;}
-            else{System.out.println(num);}     
-        } while (num != 0);
-        
-        
+            in = input.next().charAt(0);
+            System.out.println(in);
+        } while (in != 'q');
         input.close();
     }
     public static void main(String[] args){
-        watingzero();
+        waitingQ();
     }
 }

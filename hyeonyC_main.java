@@ -2,16 +2,13 @@
 import java.util.*;
 
 class Main{
-    public static void waitingQ(){
-        char in;
+    public static void geometric(){
         Scanner input = new Scanner(System.in);
-        do {
-            in = input.next().charAt(0);
-            System.out.println(in);
-        } while (in != 'q');
-        input.close();
+        int a = input.nextInt();
+        int r = input.nextInt();
+        int n = input.nextInt();
     }
     public static void main(String[] args){
-        waitingQ();
+        geometric();
     }
 }

@@ -3,22 +3,20 @@ import java.util.*;
 class Main{
 
     public static void main(String[] args){
-        arrow();
-    }    
-
-    public static void arrow(){
-        
+        int a,b, max;
+        int sum=0;
         Scanner input = new Scanner(System.in);
-        long a = input.nextLong();// 시작값
-        long m = input.nextLong();// 곱할값
-        long d = input.nextLong();// 더할 값
-        long n = input.nextLong();// 몇 번째
+        a = input.nextInt();
+        b = input.nextInt();
         input.close();
-        long result=a;
-        for(int i=1 ; i<n ; i++){
-            result = result * m + d;
-            System.out.println(result);
+
+        max = a > b ? a : b;
+        for (int i = 1; i <= max ; i++) {
+            if(i==a || i==b){
+                sum = (i%2)!=0 ? sum+i : sum+10*(i/2);
+            }
         }
-        System.out.printf("%d",result);
+
+        System.out.println(sum);
     }
 }

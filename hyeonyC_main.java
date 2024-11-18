@@ -10,10 +10,10 @@ class Main{
         b = input.nextInt();
         input.close();
 
-        max = a > b ? a : b;
+        max = a >= b ? a : b;
         for (int i = 1; i <= max ; i++) {
             if(i==a || i==b){
-                sum = (i%2)!=0 ? sum+i : sum+10*(i/2);
+                sum = (i%2)!=0 ? sum+i/2+1 : sum+10*(i/2);
             }
         }
 

@@ -10,8 +10,8 @@ public class CodeUp {
         b = input.nextInt();
         input.close();        
 
-        if (a>=b) {        max = a;             min = b;         } 
-        else {             max = b;             min = a;        }
+        max = a>=b ? a : b;
+        min = a+b-max;
 
         for (int i = min; i <= max; i++) {
             if (i%2 == 0) { 
@@ -19,7 +19,8 @@ public class CodeUp {
                 System.out.print("-"+i);
             } else { 
                 total += i; 
-                //i == min ? System.out.print(i) : System.out.print("+"+i);
+                if(i == min) System.out.print(i);
+                else System.out.print("+"+i);
             }
         }
 

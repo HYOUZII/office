@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "hyeonyC_main",
+      "request": "launch",
+      "mainClass": "hyeonyC_main",
+      "projectName": "Git_375bc7df"
+    },
+    {
+      "type": "java",
+      "name": "CodeUp",
+      "request": "launch",
+      "mainClass": "CodeUp",
+      "projectName": "Git_375bc7df"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "Main",

@@ -1,29 +1,47 @@
 import java.util.*;
 
-public class CodeUp {
-
-    public static void main(String[] args){
-        int a,b,total=0;
-        int max,min;
-        Scanner input = new Scanner(System.in);
-        a = input.nextInt();
-        b = input.nextInt();
-        input.close();        
-
-        max = a>=b ? a : b;
-        min = a+b-max;
-
-        for (int i = min; i <= max; i++) {
-            if (i%2 == 0) { 
-                total -= i; 
-                System.out.print("-"+i);
-            } else { 
-                total += i; 
-                if(i == min) System.out.print(i);
-                else System.out.print("+"+i);
+class Isitright {
+    void Whatnum(int n) {
+        int a, b,flge = 0;
+        if (n > 1) {
+            for (int i = 2; i <= n; i++) {
+                if(n%i==0 & n==i){
+                    System.out.println("wrong number");
+                    break;
+                }
+                else if(n%i==0){
+                    a = i;
+                    b = n / i;
+                    for (int j = 2; j <= a; j++) {
+                        flge += (a%j==0 & a!=j) ? 1 : 0;
+                    }
+                    for (int k = 2; k <= b; k++) {
+                        flge += (b%k==0 & b!=k) ? 1 : 0;
+                    }
+                    if (flge>=1) {
+                        System.out.println("wrong number");
+                        break;
+                    }else{
+                        System.out.println(a+" "+b);
+                        break;
+                    }
+                }
             }
+        }else {
+            System.out.println("wrong number");
         }
+    }
+}
 
-        System.out.print("="+total);
+class Main {
+
+    public static void main(String[] args) {
+        int num;
+        Scanner input = new Scanner(System.in);
+        num = input.nextInt();
+        input.close();
+
+        Isitright Q1 = new Isitright();
+        Q1.Whatnum(num);
     }
 }

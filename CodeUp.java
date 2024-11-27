@@ -1,30 +1,34 @@
 import java.util.*;
-class Isitright{
-    void Whatnum(String val){
-        int len = val.length();
-        char[] arry = new char[len];
-        for (int i = 0; i < arry.length; i++) {
-            arry[i] = val.charAt(i);
-            
+
+class cipher {
+    void Caesar(String in){
+        char[] brutus = new char[in.length()];
+        for (int i = 0; i < brutus.length; i++) {
+            brutus[i] = in.charAt(i);
         }
 
-        for (int i = 0; i < arry.length; i++) {
-            if(arry[i]>='A' & arry[i]<='Z'){System.out.printf("%c",arry[i]+32);}
-            else if(arry[i]>='a' & arry[i]<='z'){System.out.printf("%c",arry[i]-32);}
-            else{System.out.printf("%c",arry[i]);}
-        }        
-    }
+        for (int i = 0; i < brutus.length; i++) {
+            if (brutus[i]>='a' & brutus[i]<='c') {
+                System.out.printf("%c",brutus[i]+23);
+            }
+            else if(brutus[i]==32){
+                System.out.printf("%c",brutus[i]);
+            }
+            else{
+                System.out.printf("%c",brutus[i]-3);
+            }
+        }
+
+    }    
 }
-
 class Main {
+    public static void main(String[] args){
+        Scanner getScanner = new Scanner(System.in);
+        String input = getScanner.nextLine();
+        getScanner.close();
 
-    public static void main(String[] args) {
-        String val;
-        Scanner input = new Scanner(System.in);
-        val = input.nextLine();
-        input.close();
-
-        Isitright Q1 = new Isitright();
-        Q1.Whatnum(val);
+        cipher codCipher = new cipher();
+        codCipher.Caesar(input);
     }
+    
 }
